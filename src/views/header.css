@@ -1,0 +1,25 @@
+.Header {
+    width: 100%;
+  }
+  
+  .HeaderGroup {
+    max-width: 900px;
+    margin: 0rem auto 0;
+    padding: 3rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    grid-template-areas: "H1 . H2";
+  }
+  
+  .headLogo img {
+    grid-area: H1;
+  }
+  .headLogin {
+    grid-area: H2;
+  }
+  
+  .option {
+    cursor: pointer;
+  }
