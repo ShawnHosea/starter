@@ -1,5 +1,6 @@
 const Footer = require('./footer')
 const Header = require('./header')
+const Main = require('./main')
 
 module.exports = function Layout (props) {
 
@@ -15,7 +16,7 @@ return `
 <body>
     <div>
         ${Header(props)}
-        <p>Hello World</p>
+        ${Main(props)}
         ${Footer(props)}
     </div>
 </body>
