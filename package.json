@@ -4,7 +4,8 @@
   "description": "A simple Begin app with the minimum necessary file structure",
   "scripts": {
     "start": "npx sandbox",
-    "test": "tape test/index-test.js | tap-spec"
+    "test": "tape test/index-test.js | tap-spec",
+    "styles": "npx cssmitten ./config.json > ./views/styles.css"
   },
   "devDependencies": {
     "@architect/sandbox": "^1.13.3",
@@ -12,6 +13,7 @@
     "tape": "^5.0.1"
   },
   "dependencies": {
+    "cssmitten": "^3.0.5",
     "tiny-json-http": "^7.2.0"
   }
 }

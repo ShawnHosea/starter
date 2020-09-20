@@ -1,5 +1,4 @@
-module.exports = function Footer(props) {
-    props = props || {}
+module.exports = function Footer() {
     let date = new Date().getFullYear()
 
 return `

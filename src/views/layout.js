@@ -12,12 +12,14 @@ return `
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
     <title>Personal Website</title>
+    <link rel="stylesheet" type="text/css" href="./styles.css">
 </head>
 <body>
     <div>
         ${Header(props)}
         ${Main(props)}
         ${Footer(props)}
+        <p class="text-p3">Hello World</p>
     </div>
 </body>
 </html>

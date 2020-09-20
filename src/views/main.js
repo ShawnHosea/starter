@@ -4,7 +4,7 @@ module.exports = function Main (props) {
    
 return `
 <div>
-    <p>Hello World</p>
+    <p class="text-p3">Hello World</p>
 </div>
 `;
 }
