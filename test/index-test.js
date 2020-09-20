@@ -1,23 +1,8 @@
 let tiny = require('tiny-json-http')
 let sandbox = require('@architect/sandbox')
 let test = require('tape')
-let end
 
-// test('sandbox.start', async t => {
-//   t.plan(1)
-//   end = await sandbox.start()
-//   t.ok(true, 'start the sandbox')
-// })
-
-// // your tests will go here
-
-// test('end', async t => {
-//   t.plan(1)
-//   end()
-//   t.ok(true, 'shut down sandbox')
-// })
-
-// TODO: Check difference in 'ok' and 'equal'
+// TODO: Learrn Tap & Tape & Tiny
 
 test('Start the Sandbox', async t => {
     t.plan(1)

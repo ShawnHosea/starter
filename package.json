@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "A simple Begin app with the minimum necessary file structure",
   "scripts": {
-    "start": "arc sandbox",
+    "start": "npx sandbox",
     "test": "tape test/index-test.js | tap-spec"
   },
   "devDependencies": {
