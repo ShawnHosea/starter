@@ -1,10 +1,7 @@
 
-module.exports = function Main (props) {
-    props = props || {}
+module.exports = function Main (props = {}) {
+    let {title} = props
    
-return `
-<div>
-    <p class="text-p3">Hello World</p>
-</div>
-`;
+return title
+
 }

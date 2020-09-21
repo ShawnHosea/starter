@@ -1,7 +1,7 @@
 const Layout = require('@architect/views/layout.js')
 
 exports.handler = async function About (req) {
-  let body = Layout({})
+  let body = Layout({ title: 'About'})
   
   return {
     statusCode: 200,
