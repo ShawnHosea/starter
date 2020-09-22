@@ -1,10 +1,9 @@
 const Layout = require('@architect/views/layout.js')
-const Static = require('@architect/shared/static.json')
-
 
 exports.handler = async function Index (req) {
-  
+
   let body = Layout({ content: "Home" })
+  console.log(body)
   
   return {
     statusCode: 200,
