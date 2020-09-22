@@ -11,8 +11,8 @@ return `
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
     <title>Personal Website</title>
-    <link rel="stylesheet" type="text/css" href="_static/styles/styles.css">
-    <link rel="stylesheet" type="text/css" href="_static/styles/header.css">
+    <link rel="stylesheet" type="text/css" href="/_static/styles/styles.css">
+    <link rel="stylesheet" type="text/css" href="/_static/styles/header.css">
 </head>
 <body class="font-sans">
     <div>
