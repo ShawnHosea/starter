@@ -1,7 +1,7 @@
 @app
 begin-app
 
-@static
+@staticfoo
 fingerprint true
 folder public
 ignore
