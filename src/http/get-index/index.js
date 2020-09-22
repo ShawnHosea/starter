@@ -1,4 +1,5 @@
 const Layout = require('@architect/views/layout.js')
+const arc = require('@architect/functions')
 
 
 exports.handler = async function Index (req) {
