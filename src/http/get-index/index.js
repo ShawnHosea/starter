@@ -1,5 +1,6 @@
 const Layout = require('@architect/views/layout.js')
 
+
 exports.handler = async function Index (req) {
 
   let body = Layout({ content: "Home" })
