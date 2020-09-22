@@ -11,14 +11,14 @@ return `
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
     <title>Personal Website</title>
-    <link rel="stylesheet" type="text/css" href="_static/styles.css}">
+    <link rel="stylesheet" type="text/css" href="_static/styles/styles.css">
+    <link rel="stylesheet" type="text/css" href="_static/styles/header.css">
 </head>
-<body>
+<body class="font-sans">
     <div>
         ${Header(props)}
         ${Main(props)}
         ${Footer(props)}
-        <p class="text-p3 border-solid">Hello World</p>
     </div>
 </body>
 </html>

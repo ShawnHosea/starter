@@ -8,7 +8,7 @@ ignore
   .js.map
   tiff
 prune true
-
+spa false
 
 @http
 get /

@@ -3,7 +3,8 @@ const Static = require('@architect/shared/static.json')
 
 
 exports.handler = async function Index (req) {
-  let body = Layout({ title: "home" })
+  
+  let body = Layout({ content: "Home" })
   
   return {
     statusCode: 200,

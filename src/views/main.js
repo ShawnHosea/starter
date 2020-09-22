@@ -1,7 +1,7 @@
 
 module.exports = function Main (props = {}) {
-    let {title} = props
+    let {content} = props
    
-return title
+return content
 
 }
