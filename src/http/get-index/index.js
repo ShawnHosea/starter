@@ -5,7 +5,7 @@ const arc = require('@architect/functions')
 exports.handler = async function Index (req) {
 
   let body = Layout({ content: "Home" })
-  console.log(body)
+
   
   return {
     statusCode: 200,
