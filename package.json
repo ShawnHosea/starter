@@ -1,11 +1,11 @@
 {
   "name": "begin-app",
   "version": "0.0.0",
-  "description": "A simple Begin app with the minimum necessary file structure",
+  "description": "Production App Starter",
   "scripts": {
     "start": "npx sandbox",
     "test": "tape test/index-test.js | tap-spec",
-    "styles": "npx cssmitten ./config.json > ./public/styles.css"
+    "styles": "npx cssmitten ./config.json > ./public/styles/styles.css"
   },
   "devDependencies": {
     "@architect/sandbox": "^2.0.0",
