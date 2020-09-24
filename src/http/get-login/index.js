@@ -9,16 +9,30 @@ exports.handler = async function Login (req) {
       `<div>
         <h2>I already have an account</h2>
         <p>Sign in with your email and password</p>
-        <form
-        action="/login"
-        method="GET"
-       >
-        <input
-          name="text"
-          type="text"
-          autofocus="autofocus"
-          class="border-solid"
-        />
+
+        <form action="/login" method="POST">
+            <div>
+                <div>
+                    <label for="uname"><b>Username</b></label>
+                    <input class="border-solid" type="text" placeholder="Enter Username" name="uname" required>
+                </div>
+                <div>
+                    <label for="psw"><b>Password</b></label>
+                    <input class="border-solid" type="password" placeholder="Enter Password" name="psw" required>
+                </div>
+                <div>
+                    <button type="submit">Login</button>
+                </div>
+                <div>
+                    <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+                </div>
+            </div>
+
+            <div>
+                <p><a href="#">Forgot password?</a></p>
+            </div>
         </form>
       </div>
       `
