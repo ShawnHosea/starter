@@ -4,7 +4,6 @@ const arc = require('@architect/functions')
 module.exports = function Header(props) {
     props = props || {}
     let logo = arc.static('logo.png')
-    console.log(logo)
 
    
 return `
