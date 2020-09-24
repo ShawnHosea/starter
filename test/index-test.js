@@ -2,7 +2,7 @@ let tiny = require('tiny-json-http')
 let sandbox = require('@architect/sandbox')
 let test = require('tape')
 
-// TODO: Learrn Tap & Tape & Tiny
+// TODO: Learn Tap/Tape & Tiny
 
 test('Start the Sandbox', async t => {
     t.plan(1)

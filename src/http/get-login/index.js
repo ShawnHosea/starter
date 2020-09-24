@@ -24,7 +24,7 @@ exports.handler = async function Login (req) {
 
                 <div>
                     <button 
-                    class="pt-1 pb-1 pr2 pl2 bg-g10 text-g0 bg-h5:hover" 
+                    class="pt-1 pb-1 pr2 pl2 bg-g10 text-g0 radius0 cursor-pointer bg-h5 text-h2 bg-d1" 
                     type="submit">Login</button>
                 </div>
 
