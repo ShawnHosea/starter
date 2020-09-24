@@ -12,7 +12,7 @@ return `
             <a href="/"><img height='40px' alt='logo' src="${logo}"></a>
             <a href="/about">About</a>
             <a href="/contact">Contact</a>
-            <button>Login</button>
+            <a href="/login"><button>Login</button></a>
         </div>
     </div>
     `;

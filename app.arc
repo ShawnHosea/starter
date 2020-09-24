@@ -14,6 +14,11 @@ spa false
 get /
 get /about
 get /contact
+get /login
+post /login
+
+@views
+
 
 @tables
 data
