@@ -25,3 +25,20 @@
     cursor: pointer;
   }
 
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+   
+    text-align: center;
+  }
+
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: rgb(255, 217, 0);
+  }

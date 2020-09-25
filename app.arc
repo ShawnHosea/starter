@@ -17,6 +17,7 @@ get /contact
 get /login
 post /login
 get /signup
+post /signup
 
 @views
 

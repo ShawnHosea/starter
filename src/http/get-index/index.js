@@ -4,7 +4,13 @@ const arc = require('@architect/functions')
 
 exports.handler = async function Index (req) {
 
-  let body = Layout({ content: "Home" })
+  let body = Layout({ 
+    content: 
+    `<div>
+        <a href="signup">Create new account</a>
+    </div>
+    ` 
+  })
 
   
   return {

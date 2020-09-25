@@ -13,7 +13,7 @@ return `
     <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
     <title>Personal Website</title>
     <link rel="stylesheet" type="text/css" href="${arc.static('/styles/styles.css')}">
-    <link rel="stylesheet" type="text/css" href="${arc.static('/styles/header.css')}">
+    <link rel="stylesheet" type="text/css" href="${arc.static('/styles/custom.css')}">
 </head>
 <body class="font-sans">
     <div>
