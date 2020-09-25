@@ -15,6 +15,10 @@ exports.handler = async function Signup (req) {
                     <label for="user"><b>Username</b></label>
                     <input class="border-solid border1 border-g3" type="text" placeholder="Enter Username" name="user" required>
                 </div>
+                
+                <div>
+                  <input type="hidden" value="" name="key">
+                </div>
 
                 <div class="m1">
                     <label for="pass"><b>Password</b></label>
