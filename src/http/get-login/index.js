@@ -7,24 +7,23 @@ exports.handler = async function Login (req) {
   let body = Layout({  
       content: 
       `<div class="text-center">
-        <h2>I already have an account</h2>
-        <p>Sign in with your email and password</p>
+        <h3>Sign in with your email and password</h3>
 
         <form action="/login" method="POST">
             <div>
-                <div>
+                <div class="m1">
                     <label for="uname"><b>Username</b></label>
                     <input class="border-solid border1 border-g3" type="text" placeholder="Enter Username" name="uname" required>
                 </div>
 
-                <div>
+                <div class="m1">
                     <label for="psw"><b>Password</b></label>
                     <input class="border-solid border1 border-g3" type="password" placeholder="Enter Password" name="psw" required>
                 </div>
 
                 <div>
                     <button 
-                    class="pt-1 pb-1 pr2 pl2 bg-g10 text-g0 radius0 cursor-pointer bg-h5 text-h2 bg-d1" 
+                    class="uppercase no-underline pt-1 pb-1 pr2 pl2 bg-g10 text-g0 radius0 cursor-pointer bg-h5 text-h2 bg-d1 m1" 
                     type="submit">Login</button>
                 </div>
 
