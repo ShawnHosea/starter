@@ -12,17 +12,13 @@ exports.handler = async function Signup (req) {
         <form action="/signup" method="POST">
             <div>
                 <div class="m1">
-                    <label for="user"><b>Username</b></label>
-                    <input class="border-solid border1 border-g3" type="text" placeholder="Enter Username" name="user" required>
-                </div>
-                
-                <div>
-                  <input type="hidden" value="" name="key">
+                    <label for="email"><b>E-mail:</b></label>
+                    <input class="border-solid border1 border-g3" type="email" placeholder="Enter email" name="email" required>
                 </div>
 
                 <div class="m1">
-                    <label for="pass"><b>Password</b></label>
-                    <input class="border-solid border1 border-g3" type="password" placeholder="Enter Password" name="pass" required>
+                    <label for="password"><b>Password:</b></label>
+                    <input class="border-solid border1 border-g3" type="password" placeholder="Enter Password" name="password" required>
                 </div>
 
                 <div>

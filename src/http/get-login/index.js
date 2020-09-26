@@ -8,17 +8,17 @@ exports.handler = async function Login (req) {
       content: 
       `<div class="text-center">
         <h3>Sign in with your email and password</h3>
-
+        <small>Not a member?<a href="/signup"> Sign up here</a></small>
         <form action="/login" method="POST">
             <div>
                 <div class="m1">
-                    <label for="username"><b>Username</b></label>
-                    <input class="border-solid border1 border-g3" type="text" placeholder="Enter Username" name="username" required>
+                    <label for="email"><b>E-mail:</b></label>
+                    <input class="border-solid border1 border-g3" type="email" placeholder="Enter email" name="email" required>
                 </div>
 
                 <div class="m1">
-                    <label for="password"><b>Password</b></label>
-                    <input class="border-solid border1 border-g3" type="password" placeholder="Enter Password" name="password" required>
+                    <label for="password"><b>Password:</b></label>
+                    <input class="border-solid border1 border-g3" type="password" placeholder="Enter password" name="password" required>
                 </div>
 
                 <div>
@@ -29,8 +29,8 @@ exports.handler = async function Login (req) {
 
                 <div>
                     <label>
-                    <input type="checkbox" checked="checked" name="remember"> Remember me
-                </label>
+                      <input type="checkbox" checked="checked" name="remember"> Remember me
+                    </label>
                 </div>
             </div>
 
