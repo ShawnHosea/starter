@@ -6,7 +6,7 @@ exports.handler = async function post (req) {
   account.created = account.created || Date.now()
   
   await data.set({
-    table: 'spots',
+    table: 'accounts',
     ...account
   })
   return {
