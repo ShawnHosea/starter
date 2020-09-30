@@ -29,8 +29,10 @@ exports.handler = async function Signup (req) {
 
                 <div>
                     <label>
-                    <input type="checkbox" checked="checked" name="remember"> Remember me
-                </label>
+                      <input type="checkbox" checked="checked" name="remember"> Remember me
+                    </label>
+
+                    <input type="hidden" name="tracker" value="tracker">
                 </div>
             </div>
         </form>

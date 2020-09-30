@@ -10,6 +10,8 @@ ignore
 prune true
 spa false
 
+# --------------- HTTP -----------------
+
 @http
 get /
 get /about
@@ -27,3 +29,4 @@ data
   scopeID *String
   dataID **String
   ttl TTL
+
