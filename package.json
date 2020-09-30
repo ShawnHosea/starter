@@ -8,7 +8,7 @@
     "styles": "npx cssmitten ./config.json > ./public/styles/styles.css"
   },
   "devDependencies": {
-    "@architect/sandbox": "^2.0.0",
+    "@architect/sandbox": "^2.0.1",
     "tap-spec": "^5.0.0",
     "tape": "^5.0.1"
   },
