@@ -7,8 +7,11 @@ exports.handler = async function accounts (req) {
   // Return oldest account first
   accounts.sort((a, b) => a.created > b.created)
 
-  let table = accounts
-  let count = await data.count({table})
+  let table = 'accounts'
+  let tableCount = await data.count({table})
+  console.log(table)
+  console.log(accounts)
+  console.log(tableCount)
 
   return {
     statusCode: 201,
@@ -18,7 +21,7 @@ exports.handler = async function accounts (req) {
     },
     body: JSON.stringify({
       accounts,
-      count
+      tableCount
     })
   }
 }
