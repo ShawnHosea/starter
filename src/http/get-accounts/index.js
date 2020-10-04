@@ -4,9 +4,13 @@ exports.handler = async function accounts (req) {
   let accounts = await data.get({
     table: 'accounts'
   })
-  console.log(accounts)
+  let table = accounts
+  
+  await data.count({table})
+  console.log(table)
   // Return oldest account first
   accounts.sort((a, b) => a.created > b.created)
+
   return {
     statusCode: 201,
     headers: {
