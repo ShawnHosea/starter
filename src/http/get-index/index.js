@@ -7,7 +7,13 @@ exports.handler = async function Index (req) {
   let body = Layout({ 
     content: 
     `<div>
-        <a href="signup">Create new account</a>
+        <div class="">
+          <a href="signup" class="uppercase no-underline pt-1 pb-1 pr2 pl2 bg-g10 text-g0 radius0 cursor-pointer bg-h5 text-h2 bg-d1 m0">Create new account</a>
+        </div>
+        <div class="mt1">
+          <a href="/accounts"
+          class="uppercase no-underline pt-1 pb-1 pr2 pl2 bg-g10 text-g0 radius0 cursor-pointer bg-h5 text-h2 bg-d1 m0">Check Accounts</a>
+        </div>
     </div>
 
     <div>
