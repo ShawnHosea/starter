@@ -2,7 +2,9 @@ const Layout = require('@architect/views/layout.js')
 const arc = require('@architect/functions')
 
 
-exports.handler = async function Signup (req) {
+exports.handler = async function Signup (props) {
+
+  let created = props.created
 
   let body = Layout({  
       content: 
@@ -32,7 +34,7 @@ exports.handler = async function Signup (req) {
                       <input type="checkbox" checked="checked" name="remember"> Remember me
                     </label>
 
-                    <input type="hidden" name="tracker" value="tracker">
+                    <input type="hidden" name="created" value="${created}"/>
                 </div>
             </div>
         </form>

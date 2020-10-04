@@ -4,6 +4,7 @@ let data = require('@begin/data')
 exports.handler = async function post (req) {
   let account = arc.http.helpers.bodyParser(req) // Base64 decodes + parses body
   account.created = account.created || Date.now()
+  account.completed = !!account.completed
   console.log(account)
   
   await data.set({

@@ -21,6 +21,7 @@ post /login
 get /signup
 post /signup
 post /signup/delete
+get /accounts
 
 
 @views
