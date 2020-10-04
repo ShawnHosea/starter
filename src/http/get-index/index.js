@@ -9,6 +9,18 @@ exports.handler = async function Index (req) {
     `<div>
         <a href="signup">Create new account</a>
     </div>
+
+    <div>
+      <form action="/signup/delete" method="POST">
+      <div>
+          <div>
+              <button 
+              class="uppercase no-underline pt-1 pb-1 pr2 pl2 bg-g10 text-g0 radius0 cursor-pointer bg-h5 text-h2 bg-d1 m1" 
+              type="submit">Delete Accounts</button>
+          </div>
+      </div>
+      </form>
+    </div>
     ` 
   })
 
