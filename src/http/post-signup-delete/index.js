@@ -7,7 +7,7 @@ exports.handler = async function destroy (req) {
   console.log()
   await data.destroy({
     table: 'accounts',
-    key: ''
+    key: {}
   })
   return {
     statusCode: 302,
