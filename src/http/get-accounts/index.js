@@ -4,9 +4,11 @@ exports.handler = async function accounts (req) {
   let accounts = await data.get({
     table: 'accounts'
   })
-
   // Return oldest account first
   accounts.sort((a, b) => a.created > b.created)
+
+  let table = accounts
+  let count = await data.count({table})
 
   return {
     statusCode: 201,
@@ -15,7 +17,8 @@ exports.handler = async function accounts (req) {
       'cache-control': 'no-cache, no-store, must-revalidate, max-age=0, s-maxage=0'
     },
     body: JSON.stringify({
-      accounts
+      accounts,
+      count
     })
   }
 }
