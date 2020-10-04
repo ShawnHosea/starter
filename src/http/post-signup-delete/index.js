@@ -4,11 +4,13 @@ let data = require('@begin/data')
 
 exports.handler = async function destroy (req) {
   let key = arc.http.helpers.bodyParser(req).key // Base64 decodes + parses body
-  console.log(arc)
+  console.log(key)
+  
   await data.destroy({
-    table,
+    table: 'accounts',
     key
   })
+
   return {
     statusCode: 302,
     headers: {
