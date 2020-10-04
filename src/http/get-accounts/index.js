@@ -4,7 +4,7 @@ exports.handler = async function accounts (req) {
   let accounts = await data.get({
     table: 'accounts'
   })
-  let table = accounts
+  let table = 'accounts'
   
   await data.count({table})
   console.log(table)
@@ -18,7 +18,8 @@ exports.handler = async function accounts (req) {
       'cache-control': 'no-cache, no-store, must-revalidate, max-age=0, s-maxage=0'
     },
     body: JSON.stringify({
-      accounts
+      accounts,
+      table
     })
   }
 }
