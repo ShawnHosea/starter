@@ -7,24 +7,20 @@ exports.handler = async function destroy (req) {
   
   let table = 'accounts'
   let tableCount = await data.count({table})
+  console.log(tableCount)
 
-  let run = () => {
-    if (tableCount <= 0)
-    then
-    await data.destroy({
-      table: 'accounts',
-      key: 'Y5KxlnRZuD'
-      
-    })
-  }
-  run()
+  await data.destroy({
+    table: 'accounts',
+    key: 'Y5KxlnRZuD'
+    
+  })
+  
 
   return {
     statusCode: 302,
     headers: {
       location: '/',
       'cache-control': 'no-cache, no-store, must-revalidate, max-age=0, s-maxage=0'
-    },
-    
+    }
   }
 }
