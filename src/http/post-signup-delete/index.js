@@ -7,7 +7,7 @@ exports.handler = async function destroy (req) {
   
   let table = 'accounts'
   let tableCount = await data.count({table})
-  console.log(tableCount)
+  console.log(JSON.stringify({tableCount}))
 
   await data.destroy({
     table: 'accounts',
@@ -21,6 +21,7 @@ exports.handler = async function destroy (req) {
     headers: {
       location: '/',
       'cache-control': 'no-cache, no-store, must-revalidate, max-age=0, s-maxage=0'
-    }
+    },
+    message: `${console.log(JSON.stringify({tableCount}))}`
   }
 }
