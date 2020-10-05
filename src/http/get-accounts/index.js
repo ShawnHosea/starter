@@ -2,11 +2,11 @@ const data = require('@begin/data')
 
 exports.handler = async function accounts (req) {
 
-let table = await data.get({
+let accounts = await data.get({
     table:'accounts'
 })
 
-console.log(table)
+console.log(accounts)
 
 //   // Return oldest account first
 //   table.sort((a, b) => a.created > b.created)
@@ -31,7 +31,7 @@ console.log(tableCount)
       'cache-control': 'no-cache, no-store, must-revalidate, max-age=0, s-maxage=0'
     },
     body: JSON.stringify({
-      table,
+      accounts,
       tableCount
     })
   }
