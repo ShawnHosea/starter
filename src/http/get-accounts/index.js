@@ -10,7 +10,9 @@ console.log(table)
 
 //   // Return oldest account first
 //   table.sort((a, b) => a.created > b.created)
-  
+
+let table = 'accounts'
+
 let tableCount = await data.count({table})
 console.log(tableCount)
   
