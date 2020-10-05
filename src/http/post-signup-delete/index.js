@@ -9,12 +9,16 @@ exports.handler = async function destroy (req) {
   let tableCount = await data.count({table})
   console.log(JSON.stringify({tableCount}))
 
-  // let key = map(tableCount) {
+  let key = tableCount.forEach(row => {
 
-  // }
+    console.log(row)
+    return row
+   
+ });
+
   await data.destroy({
     table: 'accounts',
-    key: 'Q7yq7D2qIB'
+    ...key
     
   })
   
