@@ -1,7 +1,7 @@
 const data = require('@begin/data')
 
 exports.handler = async function accounts (req) {
-    
+
   let accounts = await data.get({
     table: 'accounts'
   })
@@ -12,6 +12,12 @@ exports.handler = async function accounts (req) {
   let table = 'accounts'
   let tableCount = await data.count({table})
 
+  key = accounts.forEach(row => {
+
+    console.log(row)
+   
+ });
+
   return {
     statusCode: 201,
     headers: {
@@ -20,7 +26,8 @@ exports.handler = async function accounts (req) {
     },
     body: JSON.stringify({
       accounts,
-      tableCount
+      tableCount,
+      key
     })
   }
 }
