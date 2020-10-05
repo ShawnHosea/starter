@@ -2,23 +2,25 @@ const data = require('@begin/data')
 
 exports.handler = async function accounts (req) {
 
-  let accounts = await data.get({
-    table: 'accounts',
-    key: ''
-  })
+let table = await data.get({
+    table:'accounts'
+})
 
-  // Return oldest account first
-  accounts.sort((a, b) => a.created > b.created)
+console.log(table)
 
-  let table = 'accounts'
-  let key = 'key'
-  let tableCount = await data.count({table, key})
+//   // Return oldest account first
+//   table.sort((a, b) => a.created > b.created)
+  
+let tableCount = await data.count({table})
+console.log(tableCount)
+  
 
-  run = accounts.forEach(account => {
+//   run = accounts.forEach(account => {
 
-    console.log(account)
+//     console.log(account)
    
- });
+//  });
+
 
   return {
     statusCode: 201,
@@ -27,9 +29,8 @@ exports.handler = async function accounts (req) {
       'cache-control': 'no-cache, no-store, must-revalidate, max-age=0, s-maxage=0'
     },
     body: JSON.stringify({
-      accounts,
-      tableCount,
-      key
+      table,
+      tableCount
     })
   }
 }

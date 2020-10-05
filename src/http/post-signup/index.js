@@ -9,6 +9,7 @@ exports.handler = async function post (req) {
   
   await data.set({
     table: 'accounts',
+    ...key,
     ...account
   })
   return {
