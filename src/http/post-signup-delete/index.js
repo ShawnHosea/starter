@@ -20,11 +20,16 @@ let tableCount = await data.count({table})
 console.log(tableCount)
   
 
-  await data.destroy({
+  await data.destroy([
+    {
     table: 'accounts',
-    key: `${''}`
-    
-  })
+    key: 'VQEyW70lsP'
+    },
+    {
+    table: 'accounts',
+    key: 'l7r279nlCA'
+    }
+])
   
 
   return {

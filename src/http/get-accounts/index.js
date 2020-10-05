@@ -17,12 +17,6 @@ let tableCount = await data.count({table})
 console.log(tableCount)
   
 
-//   run = accounts.forEach(account => {
-
-//     console.log(account)
-   
-//  });
-
 
   return {
     statusCode: 201,
