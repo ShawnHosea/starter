@@ -12,9 +12,9 @@ exports.handler = async function accounts (req) {
   let table = 'accounts'
   let tableCount = await data.count({table})
 
-  key = accounts.forEach(row => {
+  key = accounts.key.forEach(account => {
 
-    console.log(row)
+    console.log(account)
    
  });
 

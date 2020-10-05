@@ -14,16 +14,17 @@ exports.handler = async function destroy (req) {
 
   let table = 'accounts'
   let tableCount = await data.count({table})
+  console.log(tableCount)
 
-  key = accounts.forEach(row => {
+  key = accounts.forEach(account => {
 
-    console.log(row)
+    console.log(account)
    
  });
 
   await data.destroy({
     table: 'accounts',
-    ...key
+    key
     
   })
   
