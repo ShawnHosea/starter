@@ -3,16 +3,18 @@ const data = require('@begin/data')
 exports.handler = async function accounts (req) {
 
   let accounts = await data.get({
-    table: 'accounts'
+    table: 'accounts',
+    key: ''
   })
 
   // Return oldest account first
   accounts.sort((a, b) => a.created > b.created)
 
   let table = 'accounts'
-  let tableCount = await data.count({table})
+  let key = 'key'
+  let tableCount = await data.count({table, key})
 
-  key = accounts.key.forEach(account => {
+  run = accounts.forEach(account => {
 
     console.log(account)
    
