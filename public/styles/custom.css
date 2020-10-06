@@ -26,9 +26,8 @@
   }
 
   .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
+    margin: 2rem 0;
+    position: static;
     width: 100%;
    
     text-align: center;
@@ -66,7 +65,7 @@
   border-top: 1px solid #d9dadc;
   display: block;
   line-height: 1px;
-  margin: 15px 0;
+  margin: 2rem 0;
   position: relative;
   text-align: center;
 }
