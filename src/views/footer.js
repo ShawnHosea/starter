@@ -4,7 +4,7 @@ module.exports = function Footer() {
 return `
     <div class="footer">
         <span>© ${date} Built by</span>
-        <a href="https://shawnhosea.com/">ShawnHosea</a>
+        <a href="https://begin.com/">Begin</a>
     </div>
     `
 }

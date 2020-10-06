@@ -8,7 +8,8 @@ exports.handler = async function Signup (props) {
 
   let body = Layout({  
       content: 
-      `<div class="text-center">
+      `<div class="wrapper">
+        <div class="m-auto block-lg text-center">
         <h3>Create your account</h3>
 
         <form action="/signup" method="POST">
@@ -24,20 +25,20 @@ exports.handler = async function Signup (props) {
                 </div>
 
                 <div>
+                    <label>
+                       <input type="checkbox" checked="checked" name="remember"> Remember me
+                    </label>
                     <button 
                     class="uppercase no-underline pt-1 pb-1 pr2 pl2 bg-g10 text-g0 radius0 cursor-pointer bg-h5 text-h2 bg-d1 m1" 
                     type="submit">Submit</button>
-                </div>
-
-                <div>
-                    <label>
-                      <input type="checkbox" checked="checked" name="remember"> Remember me
-                    </label>
-
                     <input type="hidden" name="created" value="${created}"/>
                 </div>
+                <div class="divider"></div>
+                  <p class="mt2 font-black">Have an account?<a href="/login"> Log in.</a></p>
+
             </div>
         </form>
+        </div>
       </div>
       `
     })

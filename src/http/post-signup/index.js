@@ -8,10 +8,9 @@ exports.handler = async function post (req) {
   console.log(account)
   
   await data.set({
-    table: 'accounts',
-    ...key,
-    ...account
+    table: 'accounts'
   })
+  
   return {
     statusCode: 302,
     headers: {
