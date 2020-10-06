@@ -6,11 +6,22 @@ exports.handler = async function Login (req) {
 
   let body = Layout({  
       content: 
-      `<div class="text-center">
+      `<div class="wrapper">
+        <div class="m-auto block-lg text-center">
+          <button class="authBTN">Continue with Facebook</button>
+          <br>
+          <button class="authBTN">Continue with Apple</button>
+          <br>
+          <button class="authBTN">Continue with Google</button>
+        </div>
+
+        <div class="divider">
+          <strong class="divider-title ng-binding">OR</strong>
+        </div>
+        
+      <div class="text-center">
         <h3>Sign in with your email and password</h3>
-        <small>Not a member?<a href="/signup"> Sign up here</a></small>
-        <form action="/login" method="POST">
-            <div>
+       <form action="/login" method="POST">
                 <div class="m1">
                     <label for="email"><b>E-mail:</b></label>
                     <input class="border-solid border1 border-g3" type="email" placeholder="Enter email" name="email" required>
@@ -22,22 +33,22 @@ exports.handler = async function Login (req) {
                 </div>
 
                 <div>
+                    <label>
+                      <input type="checkbox" checked="checked" name="remember"> Remember me
+                    </label>
                     <button 
                     class="uppercase no-underline pt-1 pb-1 pr2 pl2 bg-g10 text-g0 radius0 cursor-pointer bg-h5 text-h2 bg-d1 m1" 
                     type="submit">Login</button>
                 </div>
 
                 <div>
-                    <label>
-                      <input type="checkbox" checked="checked" name="remember"> Remember me
-                    </label>
-                </div>
-            </div>
-
-            <div>
                 <p><a href="#">Forgot password?</a></p>
-            </div>
+                </div>
+
         </form>
+                <div class="divider"></div>
+          <p class="mt2 font-black">Not a member?<a href="/signup"> Sign up here</a></p>
+        </div>
       </div>
       `
     })

@@ -8,15 +8,13 @@ let accounts = await data.get({
 
 console.log(accounts)
 
-//   // Return oldest account first
+//   Return oldest account first
 //   table.sort((a, b) => a.created > b.created)
 
 let table = 'accounts'
 
 let tableCount = await data.count({table})
 console.log(tableCount)
-  
-
 
   return {
     statusCode: 201,
