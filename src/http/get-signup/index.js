@@ -2,9 +2,8 @@ const Layout = require('@architect/views/layout.js')
 const arc = require('@architect/functions')
 
 
-exports.handler = async function Signup (props) {
+exports.handler = async function Signup () {
 
-  let created = props.created
 
   let body = Layout({  
       content: 
@@ -15,12 +14,12 @@ exports.handler = async function Signup (props) {
         <form action="/signup" method="POST">
             <div>
                 <div class="m1">
-                    <label for="email"><b>E-mail:</b></label>
+                    <label for="email"><b>E-mail: </b></label>
                     <input class="border-solid border1 border-g3" type="email" placeholder="Enter email" name="email" required>
                 </div>
 
                 <div class="m1">
-                    <label for="password"><b>Password:</b></label>
+                    <label for="password"><b>Password: </b></label>
                     <input class="border-solid border1 border-g3" type="password" placeholder="Enter Password" name="password" required>
                 </div>
 
@@ -31,12 +30,12 @@ exports.handler = async function Signup (props) {
                     <button 
                     class="uppercase no-underline pt-1 pb-1 pr2 pl2 bg-g10 text-g0 radius0 cursor-pointer bg-h5 text-h2 bg-d1 m1" 
                     type="submit">Submit</button>
-                    <input type="hidden" name="created" value="${created}"/>
+                    
                 </div>
+
                 <div class="divider"></div>
                   <p class="mt2 font-black">Have an account?<a href="/login"> Log in.</a></p>
-
-            </div>
+                </div>
         </form>
         </div>
       </div>

@@ -20,7 +20,7 @@ let body = Layout({
 `
 <div>
   <h2>Accounts</h2>
-  <p>${JSON.stringify(accounts, null, 1)}</p>
+  <p>${JSON.stringify(accounts)}</p>
   <h2>Table Count</h2>
   <p>${JSON.stringify(tableCount)}</p>
 </div>
@@ -29,7 +29,7 @@ let body = Layout({
   return {
     statusCode: 201,
     headers: {
-      'content-type': 'HTML; charset=utf8',
+      'content-type': 'text/html; charset=utf8',
       'cache-control': 'no-cache, no-store, must-revalidate, max-age=0, s-maxage=0'
     },
     body
