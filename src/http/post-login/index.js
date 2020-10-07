@@ -9,6 +9,12 @@ exports.handler = async function post (req) {
     table: 'accounts',
     ...account
   })
+console.log(account)
+
+  // if (account === account) {
+  //   console.log(object)
+  // }
+
   return {
     statusCode: 302,
     headers: {

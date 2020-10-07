@@ -8,7 +8,7 @@ exports.handler = async function Index (req) {
     content: 
     `<div class="wrapper">
         <div class="m-auto block-lg text-center mt1">
-          <a href="signup" class="uppercase no-underline pt-1 pb-1 pr2 pl2 bg-g10 text-g0 radius0 cursor-pointer bg-h5 text-h2 bg-d1 m0">Create new account</a>
+          <a href="signup" class="uppercase no-underline pt-1 pb-1 pr2 pl2 bg-image0 text-g0 radius0 cursor-pointer bg-h5 text-h5 bg-d1 m0">Create new account</a>
         </div>
 
         <div class="divider">
@@ -18,14 +18,14 @@ exports.handler = async function Index (req) {
         <h3 class="text-center m2">For Developer testing 👇🏾</h3>
         <div class="m-auto block-lg text-center mt1">
           <a href="/accounts"
-          class="uppercase no-underline pt-1 pb-1 pr2 pl2 bg-g10 text-g0 radius0 cursor-pointer bg-h5 text-h2 bg-d1 ">Check Accounts</a>
+          class="uppercase no-underline pt-1 pb-1 pr2 pl2 bg-p4 text-g0 radius0 cursor-pointer text-h4 bg-h5 bg-d1 ">Check Accounts</a>
         </div>
    
 
     <div class="m-auto block-lg text-center mt1">
       <form action="/signup/delete" method="POST">
          <button 
-           class="uppercase no-underline pt-1 pb-1 pr2 pl2 bg-g10 text-g0 radius0 cursor-pointer bg-h5 text-h2 bg-d1 m1" type="submit">Delete Accounts</button>
+           class="uppercase no-underline pt-1 pb-1 pr2 pl2 bg-p4 text-g0 radius0 cursor-pointer bg-h5 bg-d1" type="submit">Delete Accounts</button>
       </form>
     </div>
   </div>
