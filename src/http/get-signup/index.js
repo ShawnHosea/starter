@@ -30,9 +30,8 @@ exports.handler = async function Signup () {
                     <button 
                     class="uppercase no-underline pt-1 pb-1 pr2 pl2 bg-g10 text-g0 radius0 cursor-pointer bg-h5 text-h2 bg-d1 m1" 
                     type="submit">Submit</button>
-                    
                 </div>
-
+                
                 <div class="divider"></div>
                   <p class="mt2 font-black">Have an account?<a href="/login"> Log in.</a></p>
                 </div>

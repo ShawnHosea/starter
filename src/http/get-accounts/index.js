@@ -3,7 +3,7 @@ const arc = require('@architect/functions')
 const data = require('@begin/data')
 
 exports.handler = async function accounts (req) {
-
+  
 let accounts = await data.get({
     table:'accounts'
 })
@@ -11,7 +11,6 @@ console.log(accounts)
 
 
 let table = 'accounts'
-
 let tableCount = await data.count({table})
 console.log(tableCount)
 
