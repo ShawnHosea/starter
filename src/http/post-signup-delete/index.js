@@ -9,12 +9,12 @@ exports.handler = async function destroy (req) {
 
   await data.destroy([
     {
-    table: 'spots',
-    key: 'p23vo5pDcn'
+    table: 'accounts',
+    key: 'R13PML5msQ'
     },
     {
     table: 'accounts',
-    key: 'VQ373jx0Cz'
+    key: 'oy3WYYgMu5'
     }
 ])
   
