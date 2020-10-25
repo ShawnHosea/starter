@@ -2,6 +2,6 @@
     "dependencies": {
         "@architect/functions": "latest",
         "@begin/data": "latest",
-        "bcrypt": "^2.4.3"
+        "bcrypt": "^3.0.6"
     }
 }
