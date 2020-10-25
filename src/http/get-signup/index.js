@@ -2,10 +2,9 @@ const Layout = require('@architect/views/layout.js')
 const arc = require('@architect/functions')
 
 
-exports.handler = async function Signup () {
+exports.handler = arc.http.async(signup)
 
-
-  let body = Layout({  
+let body = Layout({  
       content: 
       `<div class="wrapper">
         <div class="m-auto block-lg text-center">
@@ -41,13 +40,14 @@ exports.handler = async function Signup () {
       `
     })
 
-  
+  async function signup(req) {
   return {
     statusCode: 200,
     headers: {
       'cache-control': 'no-cache, no-store, must-revalidate, max-age=0, s-maxage=0',
       'content-type': 'text/html; charset=utf8'
     },
+    account: req.session.account,
     body
   }
 }

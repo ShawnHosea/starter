@@ -5,6 +5,7 @@ const arc = require('@architect/functions')
 
 module.exports = function Layout (props) {
 
+
 return `
 <!DOCTYPE html>
 <html lang="en">

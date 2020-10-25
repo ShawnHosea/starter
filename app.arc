@@ -17,12 +17,12 @@ get /
 get /about
 get /contact
 get /login
-post /login
 get /signup
-post /signup
-post /signup/delete
 get /accounts
 
+post /signup
+post /login
+post /signup/delete
 
 @views
 
