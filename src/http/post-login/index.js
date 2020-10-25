@@ -1,19 +1,40 @@
 let arc = require('@architect/functions')
 let data = require('@begin/data')
+let bcrypt = require('bcryptjs')
 
-exports.handler = async function post (req) {
-  let account = arc.http.helpers.bodyParser(req) // Base64 decodes + parses body
-  account.created = account.created || Date.now()
-  
-  await data.get({
+exports.handler = arc.http.async(login)
+
+async function login(req) {
+
+  let result = await data.get({
     table: 'accounts',
-    ...account
+    key: req.body.email
   })
-  return {
-    statusCode: 302,
-    headers: {
-      'location': '/',
-      'cache-control': 'no-cache, no-store, must-revalidate, max-age=0, s-maxage=0'
+
+  if(!result) {
+    return {
+      session: {},
+      location: '/?notfound'
+    }
+  }
+
+  let hash = result.password
+  console.log(hash)
+  let good = bcrypt.compareSync(req.body.password, hash)
+
+  if(good) {
+    return {
+      session: {
+        account: {
+          email: req.body.email
+        }
+      },
+      location: '/admin'
+    }
+  } else {
+    return {
+      session: {},
+      location: '/?badpassword'
     }
   }
 }

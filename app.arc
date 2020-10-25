@@ -12,6 +12,9 @@ spa false
 
 # --------------- HTTP -----------------
 
+@events
+registered
+
 @http
 get /
 get /admin
