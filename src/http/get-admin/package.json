@@ -1,16 +1,15 @@
 {
-  "name": "post-signup-delete",
+  "name": "get-admin",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "@architect/functions": "^3.13.3",
-    "@begin/data": "^1.2.3",
-    "bcrypt": "^5.0.0"
+    "@architect/functions": "^3.13.4"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC"
 }

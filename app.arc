@@ -14,6 +14,7 @@ spa false
 
 @http
 get /
+get /admin
 get /about
 get /contact
 get /login

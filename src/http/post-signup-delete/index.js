@@ -1,30 +1,43 @@
 let arc = require('@architect/functions')
 let data = require('@begin/data')
+let bcrypt = require('bcryptjs');
 
+exports.handler = arc.http.async(/*debug,*/ nuke)
 
-exports.handler = async function destroy (req) {
-  // let key = arc.http.helpers.bodyParser(req).key 
-  // Base64 decodes + parses body
+// async function debug(req) {return {req}}
 
-  // console.log(key)
-  
-  await data.destroy([
-    {
+async function nuke(req) {
+
+  let result = await data.get({
     table: 'accounts',
-    key: '7XEqxjzpuj'
-    },
-    {
-    table: 'accounts',
-    key: 'M1kq893Mso'
+    key: req.body.email
+  })
+
+  if (!result) {
+    return {
+      session: {},
+      location: '/?notfound'
     }
-])
-  
+  }
 
-  return {
-    statusCode: 302,
-    headers: {
-      location: '/',
-      'cache-control': 'no-cache, no-store, must-revalidate, max-age=0, s-maxage=0'
+  let hash = result.password
+  let good = bcrypt.compareSync(req.body.password, hash)
+
+  if (good) {
+    await data.destroy({
+      table: 'accounts',
+      key: req.body.email
+    })
+    console.log('account destroyed')
+    return {
+      session: {},
+      location: '/'
+    }
+  }
+  else {
+    return {
+      session: {},
+      location: '/?badpassword'
     }
   }
 }
