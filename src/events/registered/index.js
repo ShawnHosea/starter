@@ -18,7 +18,7 @@ async function registered(event) {
 
     let result = await mail.send({
       to: email,
-      from: 'paul@begin.com',
+      from: 'shawnhosea@shawnhosea.com',
       subject: 'Welcome to the service',
       text: `verify your email ${process.env.BASE_URL}/verify/${token.key}`,
     });

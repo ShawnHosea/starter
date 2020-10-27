@@ -18,11 +18,13 @@ registered
 @http
 get /
 get /admin
+get /accounts
 get /about
 get /contact
 get /login
+get /logout
 get /signup
-get /accounts
+get /verify/:token
 
 post /signup
 post /login
